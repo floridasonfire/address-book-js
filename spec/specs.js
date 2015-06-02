@@ -15,10 +15,11 @@ describe('Contact', function(){
 
 describe('Address', function(){
   it("creates a new address with the given specs", function(){
-    var testAddress = new Address("4015 SE Hawthorne", "Portland", "OR");
+    var testAddress = new Address("4015 SE Hawthorne", "Portland", "OR", "97214");
     expect(testAddress.street).to.equal("4015 SE Hawthorne");
     expect(testAddress.city).to.equal("Portland");
     expect(testAddress.state).to.equal("OR");
+    expect(testAddress.zip).to.equal("97214")
   });
 
   it("adds the fullAddress method to all addresses", function() {
