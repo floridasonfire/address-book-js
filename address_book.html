@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- bootstrap styles -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- jQuery -->
+    <script src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Custom Scripts -->
+    <script src='js/scripts.js'></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-header text-center">Address Book</h1>
+      <div class="col-md-8 col-md-offset-2">
+        <form id="new_contact">
+          <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" class="form-control" required autofocus>
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" class="form-control" required>
+            <label for="phone_number">Phone Number</label>
+            <input type="text" id="phone_number" class="form-control" required>
+            <br>
+            <div id="new_addresses">
+              <div class="new_address">
+                <label for="street" class="sr-only">Street Address</label>
+                <input type="text" id="street" class="form-control" placeholder="Street Address" required>
+                <br>
+                <div class="form-inline">
+                  <label for="city" class="sr-only">City </label>
+                  <input type="text" id="city" class="form-control" placeholder="City" required>
+                  <label for="state" class="sr-only">State</label>
+                  <input type="text" id="state" class="form-control" placeholder="State" required>
+                  <label for="zip" class="sr-only">Zip</label>
+                  <input type="text" id="zip" class="form-control" placeholder="Zip Code" required>
+                </div>
+                <br>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+          <span class="btn btn-warning" id="add_address">Another Address </span>
+          <span class="btn btn-danger" id="remove_address">Remove Address </span>
+        </form>
+        <br>
+        <div class="col-md-6">
+          <div class="contacts">
+            <h2>Contacts:</h2>
+            <ul id="contact_list">
+
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="show_contact">
+            <h2></h2>
+            <p class="lead">First Name: <span class="first_name"></span></p>
+            <p class="lead">Last Name: <span class="last_name"></span></p>
+            <p>Addresses:</p>
+            <ul id="addresses"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

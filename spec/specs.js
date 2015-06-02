@@ -1,9 +1,15 @@
-describe("countUp", function(){
-  it("will take a number and a divisor and increment up", function(){
-  expect(countUp(30, 5)).to.eql([5, 10, 15, 20, 25, 30])
-  expect(countUp(10, 5)).to.eql([5, 10])
-  expect(countUp(82, 9)).to.eql([9,18,27,36,45,54,63,72,81])
-});
+describe('Contact', function(){
+  it("creates a new contact with given specs", function(){
+    var testContact = new Contact("Bob", "Ellis");
+    expect(testContact.firstName).to.equal("Bob");
+    expect(testContact.lastName).to.equal("Ellis");
+    expect(testContact.addresses).to.eql([]);
+  });
+  it("adds the fullName method to all contacts", function() {
+    var testContact = new Contact("Dave", "Matthews");
+    expect(testContact.fullName()).to.equal("Dave Matthews");
+  });
+
 
 
 
